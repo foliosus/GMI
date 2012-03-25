@@ -1,0 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+$relative-font-sizing: true;
+$base-font-size: 16px;
+$base-line-height: 20px;
+
+@import "compass";
+@import "compass/reset";
+@import "compass/typography";
+@import "compass/typography/vertical_rhythm";
+
+@import "colors";
+
+@include establish-baseline;
+
+body {
+  font-family: 'Cabin', 'Trebuchet MS', 'Trebuchet', sans-serif;
+  color: $logo_blue;
+}
+	
+h1 {
+  @include adjust-font-size-to($base-font-size * 3, $lines: 4);
+  color: $logo_green;
+}
+
+h2 {
+  @include adjust-font-size-to($base-font-size * 2, $lines: 3);
+}
+
+h3 {
+  @include adjust-font-size-to($base-font-size * 1.5, $lines: 2);
+}
+
+h4 {
+  font-weight: bold;
+}
+
+p {
+  @include trailer;
+}
