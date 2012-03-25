@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '~> 3.2.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.11'
 
-gem 'json'
+gem 'json', '~> 1.6.5'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,7 +22,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.0.1'
 
 gem 'haml', '~> 3.1.4'
 
@@ -36,9 +36,9 @@ gem 'haml', '~> 3.1.4'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano'
+gem 'capistrano', '~> 2.11.2'
 
 group :development do
-  # gem 'ruby-debug'
+  # gem 'ruby-debug' # Doesn't work with Ruby 1.9
   gem 'thin'
 end
