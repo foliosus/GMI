@@ -1,4 +1,7 @@
 Gmi::Application.routes.draw do
+  root :to => 'holding#index'
+  match 'email', :to => 'holding#process_email', :as => :email
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
