@@ -37,3 +37,8 @@ group :development do
   # gem 'ruby-debug' # Doesn't work with Ruby 1.9
   gem 'thin'
 end
+
+group :test do
+  gem 'shoulda', '~> 3.0.1'
+  gem 'factory_girl_rails', '~> 3.0.0'
+end
