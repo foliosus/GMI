@@ -33,6 +33,8 @@ gem 'haml', '~> 3.1.4'
 # Deploy with Capistrano
 gem 'capistrano', '~> 2.11.2'
 
+gem 'newrelic_rpm', '~> 3.3'
+
 group :development do
   # gem 'ruby-debug' # Doesn't work with Ruby 1.9
   gem 'thin'
