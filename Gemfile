@@ -40,6 +40,10 @@ group :development do
   gem 'thin'
 end
 
+group :production do
+  gem 'libv8', '3.3.10.4'
+end
+
 group :test do
   gem 'shoulda', '~> 3.0.1'
   gem 'factory_girl_rails', '~> 3.0.0'
