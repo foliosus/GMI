@@ -13,7 +13,7 @@ group :assets do
   gem 'compass-rails', '~> 1.0.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
+  gem 'therubyracer', '~> 0.1'
 
   gem 'uglifier', '>= 1.0.3'
 end

@@ -4,6 +4,7 @@ $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require 'rvm/capistrano'
 set :rvm_ruby_string, 'ruby-1.9.2-p318'
 
+load 'deploy/assets'
 
 set :application, 'gmi'
 set :domain, 'montessori-training-sc.com'
@@ -41,9 +42,9 @@ namespace :deploy do
   end
   after 'deploy:symlink', 'deploy:symlink_database_yml'
   
-  task :restart_delayed_job, :roles => :app do
-    run 'sudo restart delayed_job2'
-  end
-  after 'deploy:start', 'deploy:restart_delayed_job'
-  after 'deploy:restart', 'deploy:restart_delayed_job'
+  # task :restart_delayed_job, :roles => :app do
+  #   run 'sudo restart delayed_job2'
+  # end
+  # after 'deploy:start', 'deploy:restart_delayed_job'
+  # after 'deploy:restart', 'deploy:restart_delayed_job'
 end
