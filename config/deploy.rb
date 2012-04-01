@@ -10,7 +10,7 @@ set :domain, 'montessori-training-sc.com'
 set :user, 'deployer'
 
 set :scm, 'git'
-set :repository,  "ssh://git@github.com:foliosus/GMI.git"
+set :repository,  "git://github.com/foliosus/GMI.git"
 set :branch, 'master'
 set :deploy_via, :remote_cache
 
