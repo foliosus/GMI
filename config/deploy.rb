@@ -35,7 +35,9 @@ namespace :deploy do
   end
 
   task :symlink_database_yml, :roles => :app do
-    run "ln -s #{deploy_to}/shared/database.yml #{deploy_to}/current/config/database.yml"
+    [:databasae, :email].each do |file|
+      run "ln -s #{deploy_to}/shared/#{file}.yml #{deploy_to}/current/config/#{file}.yml"
+    end
   end
   after 'deploy:symlink', 'deploy:symlink_database_yml'
   
