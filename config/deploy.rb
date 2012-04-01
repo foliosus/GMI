@@ -1,7 +1,8 @@
-require 'bundler/capistrano'
-
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require 'rvm/capistrano'
+require 'bundler/capistrano'
+require 'new_relic/recipes'
+
 set :rvm_ruby_string, 'ruby-1.9.2-p318'
 
 load 'deploy/assets'
@@ -36,11 +37,11 @@ namespace :deploy do
   end
 
   task :symlink_database_yml, :roles => :app do
-    [:databasae, :email].each do |file|
-      run "ln -s #{deploy_to}/shared/#{file}.yml #{deploy_to}/current/config/#{file}.yml"
+    [:database, :email].each do |file|
+      run "rm -f #{release_path}/config/#{file}.yml && ln -s #{deploy_to}/shared/#{file}.yml #{release_path}/config/#{file}.yml"
     end
   end
-  after 'deploy:symlink', 'deploy:symlink_database_yml'
+  after 'deploy:finalize_update', 'deploy:symlink_database_yml'
   
   # task :restart_delayed_job, :roles => :app do
   #   run 'sudo restart delayed_job2'
