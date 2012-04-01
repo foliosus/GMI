@@ -3,7 +3,7 @@ require 'rvm/capistrano'
 require 'bundler/capistrano'
 require 'new_relic/recipes'
 
-set :rvm_ruby_string, 'ruby-1.9.2-p318'
+set :rvm_ruby_string, 'ruby-1.9.2-p318@gmi'
 
 load 'deploy/assets'
 
