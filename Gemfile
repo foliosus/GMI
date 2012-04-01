@@ -14,6 +14,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', '~> 0.1'
+  gem 'libv8', '~> 3.3.10.4'
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -38,10 +39,6 @@ gem 'newrelic_rpm', '~> 3.3'
 group :development do
   # gem 'ruby-debug' # Doesn't work with Ruby 1.9
   gem 'thin'
-end
-
-group :production do
-  gem 'libv8', '3.3.10.4'
 end
 
 group :test do
