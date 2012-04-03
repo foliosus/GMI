@@ -47,5 +47,5 @@ group :test do
 end
 
 group :production do
-  gem 'rb-readline', '~> 0.4.2'
+  gem 'rb-readline', '~> 0.4.2' # Necessary for getting consoles to start in Ubuntu 11.10
 end
