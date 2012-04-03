@@ -58,5 +58,6 @@ module Gmi
     
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = YAML.load_file("#{Rails.root}/config/email.yml")
+    config.action_mailer.default_url_options = { :host => 'montessori-training-sc.com' }
   end
 end
