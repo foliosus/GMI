@@ -45,3 +45,7 @@ group :test do
   gem 'shoulda', '~> 3.0.1'
   gem 'factory_girl_rails', '~> 3.0.0'
 end
+
+group :production do
+  gem 'rb-readline', '~> 0.4.2'
+end
