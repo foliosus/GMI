@@ -1,17 +1,14 @@
 .row.center
-  %p= image_tag('logo_large.png', :width => 499, :height => 230, :class => 'center')
-  %h1 Coming soon to Greenville, SC
+  .twelvecol
+    %p= image_tag('logo_large.png', :width => 499, :height => 230, :class => 'center')
+    %h1 Coming soon to Greenville, SC
 
-.row
-  .fourcol
-    %h3 Who are we?
-    %p GMI is a bilingual English/Spanish AMI Primary training center. Our goal is to train you to become an AMI-certified Montessori teacher for children aged 3 to 6.
-    %p Our wonderful trainer, Brenda Gonzalez, is a native Spanish speaker. She completed her AMI training in 2012, working with the trainers at the <a href="http://montessori-nw.org">Montessori Institute Northwest</a>, and others.
-    %p We are still waiting for final approval from AMI to open our training center, but we're hopeful it will arrive soon. We expect to enroll our first course in the Fall of 2012.
-  
-  .fourcol
+.row.center
+  .twelvecol
     %h3 Curious? Questions?
     %p For any questions, including application procedures, please contact us.
+  .fourcol
+  .fourcol
     %p
       %a.button{:href => 'javascript:void(0);'} Get in touch!
     #contact_information
@@ -20,10 +17,11 @@
       %h3 Email
       #contact_form
         = render :partial => "email_form"
+
+.row.center
+  .twelvecol
+    %p.center#ami_logo
+      %a{:href => 'http://www.montessori-ami.org/', :class => 'image'}= image_tag('logo_ami.jpg', :width => 92)
   
   .fourcol.last
-    %h3 Who is AMI?
-    %p The <a href="http://www.montessori-ami.org/">Association Montessori Internationale (AMI)</a> is the only organization founded by Maria Montessori to spread her principles. They are based in Amsterdam.
-    %p.center
-      %a{:href => 'http://www.montessori-ami.org/', :class => 'image'}= image_tag('logo_ami.jpg')
   

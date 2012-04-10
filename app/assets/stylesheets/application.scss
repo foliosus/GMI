@@ -85,6 +85,8 @@ a.button {
 
 #contact_information { display: none; }
 
+#ami_logo { @include margin_leader(3); }
+
 .center {
   text-align: center;
 }
